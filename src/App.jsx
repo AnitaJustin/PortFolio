@@ -3,7 +3,7 @@ import Hero3D from './Hero3D'
 // ✏️ Edit your content here. Everything on the page comes from this object.
 const PROFILE = {
   name: 'Anita Justin C',
-  role: 'NetSuite Developer · Tableau & Data Science',
+  role: 'NetSuite · Tableau · Data Science',
   tagline: ' Analyst ',
   intro: 'I am an analytics professional who bridges the gap between deep enterprise system architecture and modern data visualization. I want to be hired for my ability to understand end-to-end business requirements, engineer the underlying data logic, and deliver clear, actionable analytics solutions.',
   about: 'I am an MCA graduate currently working at Deloitte for two years as a NetSuite developer, managing end-to-end client implementations from requirement discovery to deployment. My core technical work spans authoring diverse SuiteScripts (User Events, Map/Reduce, Client scripts, and Suitelets), streamlining data pipelines to organize enterprise data, and tailoring client-facing document layouts. Driven by a passion for uncovering trends and patterns within large datasets—exemplified by my recent Tableau project mapping six decades of music trends—I am actively pivoting deeper into analytics. Right now, I am dedicated to refining my advanced SQL skills and studying machine learning methodologies to build smarter, data-driven solutions.',
