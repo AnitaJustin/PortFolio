@@ -5,17 +5,14 @@ import { useGLTF } from '@react-three/drei'
 import { AnimationClip, AnimationMixer, LoopRepeat, MathUtils } from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
-// ✏️ YOUR ACTION BUTTONS. Files are in the public folder, so "/pushup.glb" means public/pushup.glb.
-//   repeat: how many times the animation plays (default 1)
-//   hold:   seconds to stay in the final pose before relaxing (good for poses)
-//   turn:   rotates the avatar to show it from the side (radians)
+
 const ACTIONS = [
-  { id: 'twirl', label: 'Twirl', icon: '🌀' }, // built in: no file needed
-  { id: 'pushup', label: 'Push-up', icon: '💪', file: '/pushuppose.glb', repeat: 5, turn: Math.PI / 2 },
-  { id: 'running', label: 'Run', icon: '🏃', file: '/running.glb', repeat: 4 },
-  { id: 'flip', label: 'Flip', icon: '🤸', file: '/flippose.glb' },
-  { id: 'dance', label: 'Dance', icon: '💃', file: '/dancepose.glb', repeat: 2 },
-  { id: 'hero', label: 'Hero pose', icon: '🦸', file: '/superhero.glb', hold: 0.5 },
+  { id: 'twirl', label: 'Twirl', icon: '🌀' }, 
+  { id: 'pushup', label: 'Push-up', icon: '💪', file: '/anita_pushup.glb', repeat: 5, turn: Math.PI / 2 },
+  { id: 'running', label: 'Run', icon: '🏃', file: '/anita_running.glb', repeat: 4 },
+  { id: 'flip', label: 'Flip', icon: '🤸', file: '/anita_flip.glb' },
+  { id: 'dance', label: 'Dance', icon: '💃', file: '/anita_dancing.glb', repeat: 2 },
+  { id: 'hero', label: 'Hero pose', icon: '🦸', file: '/anita_superhero.glb', hold: 0.5 },
 ]
 
 // ✏️ Camera framing. scale = zoom (bigger = closer), y = height on the body that sits mid-box.
@@ -76,7 +73,7 @@ function Avatar({ api, reduceMotion, setActive }) {
   const target = useRef(CLOSE) // the framing we are easing towards
   const current = useRef(null) // whatever animation is playing
 
-  const { scene, animations } = useGLTF('/avatar.glb')
+  const { scene, animations } = useGLTF('/anita_animated.glb')
   const mixer = useMemo(() => new AnimationMixer(scene), [scene])
 
   useEffect(() => {
@@ -159,7 +156,7 @@ function Avatar({ api, reduceMotion, setActive }) {
   )
 }
 
-useGLTF.preload('/avatar.glb')
+useGLTF.preload('/anita_standing.glb')
 
 export default function Hero3D() {
   const [active, setActive] = useState(null) // which action is playing
@@ -204,7 +201,7 @@ export default function Hero3D() {
           <i /><i /><i /><i /><i />
         </div>
         {/* flat = no tone mapping, so colors stay true to the model's textures */}
-        <Canvas flat camera={{ position: [0, 2, 5], fov: 40 }} dpr={[1, 2]}>
+        <Canvas flat camera={{ position: [-2, 2 , 5], fov: 40 }} dpr={[1, 2]}>
           <ambientLight intensity={AMBIENT} />
           <hemisphereLight intensity={SKY} />
           <directionalLight position={[0, 1.5, 5]} intensity={FRONT} />
