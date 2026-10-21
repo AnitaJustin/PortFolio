@@ -204,7 +204,7 @@ export default function Hero3D() {
           <i /><i /><i /><i /><i />
         </div>
         {/* flat = no tone mapping, so colors stay true to the model's textures */}
-        <Canvas flat camera={{ position: [0, 0, 5], fov: 40 }} dpr={[1, 2]}>
+        <Canvas flat camera={{ position: [0, 2, 5], fov: 40 }} dpr={[1, 2]}>
           <ambientLight intensity={AMBIENT} />
           <hemisphereLight intensity={SKY} />
           <directionalLight position={[0, 1.5, 5]} intensity={FRONT} />
