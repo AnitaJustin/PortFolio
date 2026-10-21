@@ -21,7 +21,7 @@ const PROFILE = {
     { title: 'Violin', text: 'started Learning from 8th std , Still figuring it out. Also learning new Instruments(Guitar,Kalimba)' },
     { title: 'Movies', text: 'Every genre has a place on my watchlist, and I try to watch a bit of everything' },
   ],
-  email: 'anitajustinc@email.com',
+  email: 'anitajustinc@gmail.com',
   links: [
     { label: 'GitHub', href: 'https://github.com/AnitaJustin' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anitajustinc' },
