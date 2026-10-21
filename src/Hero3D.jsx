@@ -5,7 +5,10 @@ import { useGLTF } from '@react-three/drei'
 import { AnimationClip, AnimationMixer, LoopRepeat, MathUtils } from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
-
+// ✏️ YOUR ACTION BUTTONS. Files are in the public folder, so "/pushup.glb" means public/pushup.glb.
+//   repeat: how many times the animation plays (default 1)
+//   hold:   seconds to stay in the final pose before relaxing (good for poses)
+//   turn:   rotates the avatar to show it from the side (radians)
 const ACTIONS = [
   { id: 'twirl', label: 'Twirl', icon: '🌀' }, 
   { id: 'pushup', label: 'Push-up', icon: '💪', file: '/anita_pushup.glb', repeat: 5, turn: Math.PI / 2 },
@@ -156,7 +159,7 @@ function Avatar({ api, reduceMotion, setActive }) {
   )
 }
 
-useGLTF.preload('/anita_standing.glb')
+useGLTF.preload('/anita_animated.glb')
 
 export default function Hero3D() {
   const [active, setActive] = useState(null) // which action is playing
