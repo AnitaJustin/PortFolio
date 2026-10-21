@@ -11,7 +11,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 //   turn:   rotates the avatar to show it from the side (radians)
 const ACTIONS = [
   { id: 'twirl', label: 'Twirl', icon: '🌀' }, // built in: no file needed
-  { id: 'pushup', label: 'Push-up', icon: '💪', file: '.pushuppose.glb', repeat: 5, turn: Math.PI / 2 },
+  { id: 'pushup', label: 'Push-up', icon: '💪', file: '/pushuppose.glb', repeat: 5, turn: Math.PI / 2 },
   { id: 'running', label: 'Run', icon: '🏃', file: '/running.glb', repeat: 4 },
   { id: 'flip', label: 'Flip', icon: '🤸', file: '/flippose.glb' },
   { id: 'dance', label: 'Dance', icon: '💃', file: '/dancepose.glb', repeat: 2 },
